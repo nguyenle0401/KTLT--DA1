@@ -1,0 +1,220 @@
+/* Reset và thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, #e0dde3 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Container chính */
+.Layout_container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Khu vực nội dung chính */
+.Layout_MainContents {
+    padding: 0;
+}
+
+/* Phần thông tin chính với ảnh */
+.Personal_Main_Information {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.Personal_Location {
+    flex: 1;
+    min-width: 300px;
+}
+
+.Personal_FullName {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Personal_Department {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.95;
+    letter-spacing: 1px;
+}
+
+.Personal_Phone {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Khung ảnh */
+.Personal_HinhcanhanKhung {
+    flex-shrink: 0;
+}
+
+.Personal_Hinhcanhan {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+/* Nội dung chính */
+.MainContain {
+    padding: 40px;
+}
+
+.MainContain_Top {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Nhóm thông tin */
+.InfoGroup {
+    font-size: 22px;
+    font-weight: bold;
+    color: #357abd;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #4a90e2;
+    display: inline-block;
+}
+
+.InfoGroup:first-child {
+    margin-top: 0;
+}
+
+/* Danh sách */
+.TextInList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.TextInList li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.TextInList li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+/* Mô tả */
+.Description {
+    padding: 15px 20px;
+    background-color: white;
+    border-left: 4px solid #4a90e2;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.Layout_Footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.divCopyright {
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .Personal_Main_Information {
+        padding: 30px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .Personal_Location {
+        min-width: 100%;
+    }
+
+    .Personal_FullName {
+        font-size: 24px;
+    }
+
+    .Personal_Department {
+        font-size: 16px;
+    }
+
+    .Personal_Hinhcanhan {
+        width: 150px;
+        height: 150px;
+    }
+
+    .MainContain {
+        padding: 20px;
+    }
+
+    .MainContain_Top {
+        padding: 20px;
+    }
+
+    .InfoGroup {
+        font-size: 20px;
+    }
+
+    .TextInList li {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Personal_FullName {
+        font-size: 20px;
+    }
+
+    .Personal_Department {
+        font-size: 14px;
+    }
+
+    .Personal_Hinhcanhan {
+        width: 120px;
+        height: 120px;
+    }
+
+    .InfoGroup {
+        font-size: 18px;
+    }
+}
